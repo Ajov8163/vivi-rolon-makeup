@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Meta información y configuración -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Luz Peña - Maquillaje Profesional para Novias y Eventos Especiales en Valledupar"
+    />
+    <meta
+      name="keywords"
+      content="maquillaje profesional, novias, eventos, Valledupar"
+    />
+    <meta name="author" content="Luz Peña" />
+
+    <!-- Título de la página -->
+    <title>Luz Peña | Maquillaje Profesional para Novias y Eventos</title>
+
+    <!-- Vinculación de estilos CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- fuente de titulos de google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Parisienne&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ===============================
+         ENCABEZADO Y NAVEGACIÓN
+         =============================== -->
+    <header class="header">
+      <div class="header-container">
+        <!-- Logo del sitio -->
+        <div class="logo">
+          <h1>Luz Peña</h1>
+          <p class="logo-subtitle">MAKEUP ARTIST</p>
+        </div>
+
+        <!-- Navegación principal -->
+        <nav class="navbar">
+          <ul class="nav-list">
+            <li><a href="#inicio" class="nav-link active">INICIO</a></li>
+            <li><a href="#servicios" class="nav-link">SERVICIOS</a></li>
+            <li><a href="#galeria" class="nav-link">GALERÍA</a></li>
+            <li><a href="#cursos" class="nav-link">CURSOS</a></li>
+            <li><a href="#sobre-mi" class="nav-link">SOBRE MI</a></li>
+            <li><a href="#contacto" class="nav-link">CONTACTO</a></li>
+          </ul>
+        </nav>
+
+        <!-- Botón de reserva en header -->
+        <button class="btn btn-primary btn-small cita-header">
+          RESERVAR CITA
+          <svg
+            class="icon-calendar"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+            />
+          </svg>
+        </button>
+
+        <!-- Menú hamburguesa para móvil (será mostrado en CSS) -->
+        <div class="hamburger">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="M3 4h18v2H3zm6 7h12v2H9zm-6 7h18v2H3z"/></svg>
+          <!-- <span></span>
+          <span></span>
+          <span></span> -->
+        </div>
+      </div>
+    </header>
+
+    <!-- ===============================
+         SECCIÓN 1 HERO / PRINCIPAL
+         =============================== -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <!-- Subtítulo de sección -->
+        <p class="section-subtitle">REALZA TU BELLEZA.</p>
+        <p class="section-subtitle">VIVE TU MEJOR MOMENTO</p>
+
+        <!-- Título principal -->
+        <h2 class="hero-title">Maquillaje Profesional</h2>
+
+        <!-- Descripción en cursiva -->
+        <p class="hero-description">
+          para Novias y Eventos<br />
+          Especiales en Valledupar
+        </p>
+
+        <!-- Ícono decorativo -->
+        <div class="heart-icon">♥</div>
+
+        <!-- Texto descriptivo -->
+        <p class="hero-text">
+          Resalta tu esencia con maquillaje de alta calidad para bodas,
+          quinceañeros, eventos sociales y más.
+        </p>
+
+        <!-- Botones de acción -->
+        <div class="hero-buttons">
+          <button class="btn btn-primary cita-hero">
+            <svg
+              class="icon-calendar"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+              /></svg
+            >RESERVAR CITA
+          </button>
+          <button class="btn btn-secondary">VER TRABAJOS</button>
+        </div>
+
+        <!-- Sección de beneficios/características -->
+        <div class="benefits-banner">
+          <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 2048 1664"><path fill="currentColor" d="m212 640l623 665l-300-665zm812 772l349-772H675zM538 512l204-384H480L192 512zm675 793l623-665h-323zM683 512h682l-204-384H887zm827 0h346l-288-384h-262zm141-486l384 512q14 18 13 41.5t-17 40.5l-960 1024q-18 20-47 20t-47-20L17 620Q1 603 0 579.5T13 538L397 26q18-26 51-26h1152q33 0 51 26"/></svg></div>
+          <div class="benefit-item">
+            <p>Atención Personalizada y Productos Premium</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen del hero (se mostrará en CSS como background o como imagen) -->
+      <div class="hero-image">
+        <!-- La imagen se añadirá como background en CSS -->
+      </div>
+    </section>
+
+    <!-- ===============================
+         SECCIÓN 2 DE CARACTERÍSTICAS
+         =============================== -->
+    <section id="servicios" class="features">
+      <div class="features-header">
+        <h2>MAQUILLAJE QUE TE HACE SENTIR ÚNICA</h2>
+        <div class="heart-icon-small">♥</div>
+      </div>
+
+      <!-- Grid de características -->
+      <div class="features-grid">
+        <!-- Característica 1: Experiencia -->
+        <div class="feature-card">
+          <span class="feature-icon">✨</span>
+          <h3>Experiencia<br />Profesional</h3>
+        </div>
+
+        <!-- Característica 2: Productos -->
+        <div class="feature-card">
+          <span class="feature-icon">🎨</span>
+          <h3>Productos de<br />Alta Calidad</h3>
+        </div>
+
+        <!-- Característica 3: Puntualidad -->
+        <div class="feature-card">
+          <span class="feature-icon">⏱️</span>
+          <h3>Puntualidad y<br />Compromiso</h3>
+        </div>
+
+        <!-- Característica 4: Domicilio -->
+        <div class="feature-card">
+          <span class="feature-icon">🏠</span>
+          <h3>Servicio a Domicilio<br />en Valledupar</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===============================
+         SECCIÓN DE GALERÍA (PRÓXIMAMENTE)
+         =============================== -->
+    <section id="galeria" class="gallery">
+      <!-- Contenido de galería será añadido posteriormente -->
+    </section>
+
+    <!-- ===============================
+         SECCIÓN DE CURSOS (PRÓXIMAMENTE)
+         =============================== -->
+    <section id="cursos" class="courses">
+      <!-- Contenido de cursos será añadido posteriormente -->
+    </section>
+
+    <!-- ===============================
+         SECCIÓN SOBRE MI (PRÓXIMAMENTE)
+         =============================== -->
+    <section id="sobre-mi" class="about">
+      <!-- Contenido sobre la artista será añadido posteriormente -->
+    </section>
+
+    <!-- ===============================
+         SECCIÓN DE CONTACTO (PRÓXIMAMENTE)
+         =============================== -->
+    <section id="contacto" class="contact">
+      <!-- Contenido de contacto será añadido posteriormente -->
+    </section>
+
+    <!-- ===============================
+         PIE DE PÁGINA
+         =============================== -->
+    <footer class="footer">
+      <p>
+        &copy; 2026 Luz Peña - Makeup Artist. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <!-- Script principal (será integrado después) -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
+<!--
+----------------------------------------------------------------------------
+ULTIMA NOTA :
+SE VA A REDONDEAR EL BOTON DE CITA DEL HEADER PARA SEGUIR CON LO DEMAS  -->
