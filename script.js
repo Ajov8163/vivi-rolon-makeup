@@ -15,7 +15,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Página cargada correctamente');
     
-    // Aquí se agregarán las funcionalidades JavaScript después
+    // Inicializar funcionalidades interactivas
+    inicializarMenuHamburguesa();
     // inicializarNavegacion();
     // inicializarFormularios();
     // inicializarAnimaciones();
@@ -56,7 +57,26 @@ function inicializarAnimaciones() {
  * Esta función manejará el menú responsivo en dispositivos móviles
  */
 function inicializarMenuHamburguesa() {
-    // Se agregará lógica para abrir/cerrar menú en móvil
+    const hamburger = document.querySelector('.hamburger');
+    const navbar = document.querySelector('.navbar');
+
+    if (!hamburger || !navbar) {
+        console.log('No se encontró el menú hamburguesa o la barra de navegación');
+        return;
+    }
+
+    hamburger.addEventListener('click', function() {
+        navbar.classList.toggle('open');
+        hamburger.classList.toggle('is-active');
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            navbar.classList.remove('open');
+            hamburger.classList.remove('is-active');
+        });
+    });
+
     console.log('Menú hamburguesa inicializado');
 }
 
