@@ -524,6 +524,10 @@ section {
     line-height: 1.7;
     margin-bottom: 0;
 }
+/* quitamos el p mobil */
+.service-info .p-mobil{
+    display: none;
+}
 
 .service-button {
     align-self: flex-start;
@@ -744,6 +748,7 @@ section {
     :root {
         --spacing-xl: 24px;
         --spacing-lg: 16px;
+        --spacing-xl: 24px;
     }
 
     /* Header */
@@ -1009,10 +1014,10 @@ section {
     flex-direction: row;
     background-color: var(--color-white);
     border-radius: 10px;
+    height:157px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 70%;
 }
 .service-image {
     min-height: auto;
@@ -1042,6 +1047,14 @@ section {
     
 }
 
+.service-info {
+    padding: var(--spacing-lg) ;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    flex: 1;
+}
+
 .service-title {
     font-family: "Playfair Display", serif, 'Garamond', 'Georgia', serif;
     display: block;
@@ -1050,22 +1063,39 @@ section {
     color: var(--color-text-dark);
     letter-spacing: 0.3px;
 }
-.service-info p {
-    color: var(--color-text-light);
-    font-size: 18px;
-    line-height: 1;
-    margin-bottom: 0;
-    height: 40%;
-    overflow: hidden;
+
+/* elimina el p global */
+.service-info .p-global{
+    display: none;
 }
+/* nos quedamos con el p mobil */
+.service-info .p-mobil{
+    display: block;
+    color: var(--color-text-light);
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+
 .service-button {
     align-self: flex-start;
-    padding: 12px 0;
+    padding:  0px;
     font-size: 12px;
     margin-top: auto;
     text-align: left;
-    border: none
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
+
+.service-button svg {
+    width: 16px;
+    height: 16px;
+    color: var(--color-primary);
+}
+
+
    
 /* VAMOS POR AQUI------------------------------------ */
 
