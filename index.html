@@ -38,10 +38,10 @@
     <header class="header">
       <div class="header-container">
         <!-- Logo del sitio -->
-        <div class="logo">
+        <a href="#inicio" class="logo">
           <h1>Vivi Rolon</h1>
           <p class="logo-subtitle">MAKEUP ARTIST</p>
-        </div>
+        </a>
 
         <!-- Navegación principal -->
         <nav class="navbar">
@@ -49,7 +49,7 @@
             <li><a href="#inicio" class="nav-link active">INICIO</a></li>
             <li><a href="#servicios" class="nav-link">SERVICIOS</a></li>
             <li><a href="#galeria" class="nav-link">GALERÍA</a></li>
-            <li><a href="#cursos" class="nav-link">CURSOS</a></li>
+            <li><a href="#testimonios" class="nav-link">TESTIMONIOS</a></li>
             <li><a href="#sobre-mi" class="nav-link">SOBRE MI</a></li>
             <li><a href="#contacto" class="nav-link">CONTACTO</a></li>
           </ul>
@@ -141,7 +141,9 @@
               /></svg
             >RESERVAR CITA
           </button>
-          <button class="btn btn-secondary">VER TRABAJOS</button>
+          <a href="#galeria" class="btn btn-secondary">
+            VER TRABAJOS
+          </a>
         </div>
 
         <!-- Sección de beneficios/características -->
@@ -726,10 +728,118 @@
     </section>
 
     <!-- ===============================
-         SECCIÓN DE CURSOS (PRÓXIMAMENTE)
+         SECCIÓN DE TESTIMONIOS
          =============================== -->
-    <section id="cursos" class="courses">
-      <!-- Contenido de cursos será añadido posteriormente -->
+    <section id="testimonios" class="testimonios-section">
+      <div class="testimonios-header">
+        <p class="section-subtitle">TESTIMONIOS</p>
+        <div class="heart-icon">♥</div>
+        <h2>Lo que dicen<br />nuestras clientas</h2>
+        <p class="testimonios-description">
+          Cada historia nos inspira a seguir realizando la belleza de más mujeres
+          y a brindar experiencias inolvidables.
+        </p>
+      </div>
+
+      <!-- Grid de testimonios con carrusel en móvil -->
+      <div class="testimonios-wrapper">
+        <div class="testimonios-grid" id="testimoniosGrid">
+          <!-- Testimonio 1 -->
+          <article class="testimonio-card">
+            <div class="testimonio-image">
+              <img src="img/novia-portada.jpg" alt="María José H." />
+            </div>
+            <div class="testimonio-stars">★ ★ ★ ★ ★</div>
+            <p class="testimonio-text">
+              Luz hizo que me sintiera la novia más hermosa del mundo. El maquillaje duró perfecto toda la noche y se veía muy natural en los fotos.
+            </p>
+            <p class="author-name">María José H.</p>
+            <p class="author-category">NOVIA</p>
+          </article>
+
+          <!-- Testimonio 2 -->
+          <article class="testimonio-card">
+            <div class="testimonio-image">
+              <img src="img/sociales-portada.jpg" alt="Valentina R." />
+            </div>
+            <div class="testimonio-stars">★ ★ ★ ★ ★</div>
+            <p class="testimonio-text">
+              Excelente profesional, super atenta a cada detalle. Me maquilló para mi graduación y los detalles muy natural en los fotos.
+            </p>
+            <p class="author-name">Valentina R.</p>
+            <p class="author-category">GRADUACIÓN</p>
+          </article>
+
+          <!-- Testimonio 3 -->
+          <article class="testimonio-card">
+            <div class="testimonio-image">
+              <img src="img/quinceañera-portada.jpeg" alt="Daniela Moza" />
+            </div>
+            <div class="testimonio-stars">★ ★ ★ ★ ★</div>
+            <p class="testimonio-text">
+              Me encantó el curso, aprendí técnicas que realmente funcionan y Luz explica todo super claro. 100% recomendada.
+            </p>
+            <p class="author-name">Daniela Moza</p>
+            <p class="author-category">ALUMNA DEL CURSO</p>
+          </article>
+
+          <!-- Testimonio 4 -->
+          <article class="testimonio-card">
+            <div class="testimonio-image">
+              <img src="img/editorial-portada.jpg" alt="Camila I." />
+            </div>
+            <div class="testimonio-stars">★ ★ ★ ★ ★</div>
+            <p class="testimonio-text">
+              La mejor maquilladora en Valledupar, profesional, puntual y usa productos de alta calidad. La recomiendo con los ojos cerrados.
+            </p>
+            <p class="author-name">Camila I.</p>
+            <p class="author-category">CLIENTE FRECUENTE</p>
+          </article>
+        </div>
+
+        <!-- Paginación -->
+        <div class="testimonios-pagination">
+          <span class="pagination-dot active" data-slide="0"></span>
+          <span class="pagination-dot" data-slide="1"></span>
+          <span class="pagination-dot" data-slide="2"></span>
+          <span class="pagination-dot" data-slide="3"></span>
+        </div>
+      </div>
+
+      <!-- Estadísticas -->
+      <div class="testimonios-stats">
+        <div class="stat-card">
+          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Heart" width="50" height="50" viewBox="0 0 64 64">
+            <path d="M48 4c-7.357 0-13.639 4.146-16 9.929C29.639 8.146 23.357 4 16 4 5.985 4 0 12.644 0 21c0 8.589 5.326 17.755 15.83 27.242 7.738 6.989 15.59 11.577 15.668 11.623l.502.291.502-.291c.079-.046 7.93-4.634 15.668-11.623C58.674 38.755 64 29.589 64 21c0-8.356-5.985-17-16-17zM32 57.833C28.031 55.41 2 38.828 2 21 2 13.627 7.237 6 16 6c7.214 0 15 4.971 15 13h2c0-8.029 7.786-13 15-13 8.763 0 14 7.627 14 15 0 17.818-26.032 34.409-30 36.833z" fill="#c1827c"></path>
+          </svg>
+          <p class="stat-number">+300</p>
+          <p class="stat-label">Clientes Felices<br/>en Valledupar</p>
+        </div>
+
+        <div class="stat-card">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="50" height="50">
+            <path d="M41.758 4.409l0 8.822c0 .828.672 1.5 1.5 1.5.828 0 1.5-.672 1.5-1.5l0-8.822c0-.828-.672-1.5-1.5-1.5-.828 0-1.5.672-1.5 1.5ZM54.645 7.327l-3.147 7.18c-.332.758.013 1.643.772 1.975.758.333 1.643-.013 1.976-.771l3.146-7.18c.333-.758-.013-1.643-.771-1.976-.759-.332-1.644.014-1.976.772Z" fill="#c1827c"></path>
+          </svg>
+          <p class="stat-number">+5</p>
+          <p class="stat-label">Años de<br/>Experiencia</p>
+        </div>
+
+        <div class="stat-card">
+          <svg xmlns="http://www.w3.org/2000/svg" id="Star" viewBox="0 0 64 64" width="50" height="50">
+            <path d="M24.43164 24.93018l-1.45312 8.90869c-.06152.37793.09863.7583.41113.97852.3125.2207.72559.24219 1.05957.05762l7.55078-4.17383 7.55078 4.17383c.15039.0835.31738.125.4834.125.20215 0 .4043-.06152.57617-.18262.3125-.22021.47266-.60059.41113-.97852l-1.45312-8.90869 6.14746-6.30078c.26172-.26807.35156-.66016.23242-1.01562s-.42676-.61475-.79688-.6709l-8.45508-1.29199-3.79102-8.07568c-.16504-.35107-.51758-.5752-.90527-.5752s-.74023.22412-.90527.5752l-3.79102 8.07568-8.45508 1.29199c-.37012.05615-.67773.31543-.79688.6709s-.0293.74756.23242 1.01562l6.14746 6.30078Z" fill="#c1827c"></path>
+          </svg>
+          <p class="stat-number">+500</p>
+          <p class="stat-label">Eventos y Novias<br/>Maquilladas</p>
+        </div>
+
+        <div class="stat-card">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="50" height="50">
+            <path d="M417.18 393.698c-25.036-10.001-58.991-17.511-96.755-21.488 48.852-65.902 102.936-149.914 102.936-204.85C423.36 75.077 348.283 0 256 0 163.718 0 88.641 75.077 88.641 167.36c0 33.848 21.286 83.552 63.265 147.731 12.876 19.686 26.598 39.078 39.894 57.095-37.823 3.968-71.836 11.477-96.917 21.486-39.953 15.944-48.34 34.245-48.34 46.79C46.543 486.928 154.46 512 256 512c101.54 0 209.458-25.072 209.458-71.537-.001-12.536-8.377-30.826-48.278-46.765z" fill="#c1827c"></path>
+          </svg>
+          <p class="stat-number">+150</p>
+          <p class="stat-label">Alumnas Certificadas<br/>en Nuestros Cursos</p>
+        </div>
+      </div>
     </section>
 
     <!-- ===============================

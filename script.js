@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Inicializar funcionalidades interactivas
     inicializarMenuHamburguesa();
+    inicializarCarruselTestimonios();
     // inicializarNavegacion();
     // inicializarFormularios();
     // inicializarAnimaciones();
@@ -78,6 +79,70 @@ function inicializarMenuHamburguesa() {
     });
 
     console.log('Menú hamburguesa inicializado');
+}
+
+/**
+ * FUNCIONALIDAD: Carrusel de testimonios con paginación
+ * En móvil, el carrusel es horizontal scrollable con paginación
+ */
+function inicializarCarruselTestimonios() {
+    const testimoniosGrid = document.getElementById('testimoniosGrid');
+    const paginationDots = document.querySelectorAll('.pagination-dot');
+
+    if (!testimoniosGrid || paginationDots.length === 0) {
+        return;
+    }
+
+    const cards = testimoniosGrid.querySelectorAll('.testimonio-card');
+    let currentIndex = 0;
+
+    // Función para verificar si estamos en móvil
+    function esMobil() {
+        return window.innerWidth <= 768;
+    }
+
+    // Función para ir a un slide específico
+    function irAlSlide(index) {
+        if (!esMobil()) return;
+
+        currentIndex = index;
+        const cardWidth = cards[0].offsetWidth + parseInt(window.getComputedStyle(testimoniosGrid).gap);
+        const offset = index * cardWidth;
+        testimoniosGrid.scrollTo({
+            left: offset,
+            behavior: 'smooth'
+        });
+
+        // Actualizar puntos
+        paginationDots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
+
+    // Event listeners para los puntos de paginación
+    paginationDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            irAlSlide(index);
+        });
+    });
+
+    // Actualizar paginación al hacer scroll
+    if (esMobil()) {
+        testimoniosGrid.addEventListener('scroll', () => {
+            const scrollPosition = testimoniosGrid.scrollLeft;
+            const cardWidth = cards[0].offsetWidth + parseInt(window.getComputedStyle(testimoniosGrid).gap);
+            const newIndex = Math.round(scrollPosition / cardWidth);
+
+            if (newIndex !== currentIndex && newIndex < cards.length) {
+                currentIndex = newIndex;
+                paginationDots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === newIndex);
+                });
+            }
+        });
+    }
+
+    console.log('Carrusel de testimonios inicializado');
 }
 
 /**
