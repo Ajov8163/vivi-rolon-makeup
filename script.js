@@ -2,71 +2,26 @@
    JAVASCRIPT - FUNCIONALIDADES PRINCIPAL
    ========================================== */
 
-/**
- * Archivo principal de JavaScript
- * Preparado para integración de funcionalidades interactivas
- * - Manejo de navegación
- * - Efectos de desplazamiento
- * - Animaciones
- * - Integración con formularios
- */
-
 // Esperar a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Página cargada correctamente');
-    
-    // Inicializar funcionalidades interactivas
     inicializarMenuHamburguesa();
     inicializarCarruselTestimonios();
-    // inicializarNavegacion();
-    // inicializarFormularios();
-    // inicializarAnimaciones();
-    // Actualizar la variable CSS --header-height para evitar que anclas queden ocultas
     actualizarHeaderHeight();
 });
 
 /**
- * FUNCIONALIDAD 1: Navegación suave
- * Esta función permitirá desplazamiento suave al hacer click en links
- */
-function inicializarNavegacion() {
-    // Los links ya tienen href con ID de secciones
-    // Esta función puede ser utilizada después si es necesario agregar efectos adicionales
-    console.log('Navegación inicializada');
-}
-
-/**
- * FUNCIONALIDAD 2: Formulario de reserva
- * Esta función manejará la validación y envío del formulario
- */
-function inicializarFormularios() {
-    // Se agregará lógica para validar y enviar formularios
-    console.log('Formularios inicializados');
-}
-
-/**
- * FUNCIONALIDAD 3: Animaciones de desplazamiento
- * Esta función agregará animaciones cuando los elementos estén en vista
- */
-function inicializarAnimaciones() {
-    // Se agregará lógica para animaciones on-scroll
-    console.log('Animaciones inicializadas');
-}
-
-/**
- * FUNCIONALIDAD 4: Menú hamburguesa (móvil)
- * Esta función manejará el menú responsivo en dispositivos móviles
+ * Menú hamburguesa (móvil)
  */
 function inicializarMenuHamburguesa() {
     const hamburger = document.querySelector('.hamburger');
     const navbar = document.querySelector('.navbar');
 
     if (!hamburger || !navbar) {
-        console.log('No se encontró el menú hamburguesa o la barra de navegación');
         return;
     }
 
-    hamburger.addEventListener('click', function() {
+    hamburger.addEventListener('click', function(event) {
+        event.stopPropagation();
         navbar.classList.toggle('open');
         hamburger.classList.toggle('is-active');
     });
@@ -78,12 +33,19 @@ function inicializarMenuHamburguesa() {
         });
     });
 
-    console.log('Menú hamburguesa inicializado');
+    document.addEventListener('click', function(event) {
+        const clicDentroDelMenu = navbar.contains(event.target);
+        const clicEnHamburger = hamburger.contains(event.target);
+
+        if (!clicDentroDelMenu && !clicEnHamburger && navbar.classList.contains('open')) {
+            navbar.classList.remove('open');
+            hamburger.classList.remove('is-active');
+        }
+    });
 }
 
 /**
- * FUNCIONALIDAD: Carrusel de testimonios con paginación
- * En móvil, el carrusel es horizontal scrollable con paginación
+ * Carrusel de testimonios con paginación
  */
 function inicializarCarruselTestimonios() {
     const testimoniosGrid = document.getElementById('testimoniosGrid');
@@ -96,37 +58,33 @@ function inicializarCarruselTestimonios() {
     const cards = testimoniosGrid.querySelectorAll('.testimonio-card');
     let currentIndex = 0;
 
-    // Función para verificar si estamos en móvil
     function esMobil() {
         return window.innerWidth <= 768;
     }
 
-    // Función para ir a un slide específico
     function irAlSlide(index) {
         if (!esMobil()) return;
 
         currentIndex = index;
         const cardWidth = cards[0].offsetWidth + parseInt(window.getComputedStyle(testimoniosGrid).gap);
         const offset = index * cardWidth;
+
         testimoniosGrid.scrollTo({
             left: offset,
             behavior: 'smooth'
         });
 
-        // Actualizar puntos
         paginationDots.forEach((dot, i) => {
             dot.classList.toggle('active', i === index);
         });
     }
 
-    // Event listeners para los puntos de paginación
     paginationDots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             irAlSlide(index);
         });
     });
 
-    // Actualizar paginación al hacer scroll
     if (esMobil()) {
         testimoniosGrid.addEventListener('scroll', () => {
             const scrollPosition = testimoniosGrid.scrollLeft;
@@ -141,8 +99,6 @@ function inicializarCarruselTestimonios() {
             }
         });
     }
-
-    console.log('Carrusel de testimonios inicializado');
 }
 
 /**
@@ -164,68 +120,3 @@ window.addEventListener('orientationchange', function() {
     actualizarHeaderHeight();
 });
 
-/**
- * FUNCIONALIDAD 5: Galería de imágenes
- * Esta función agregará funcionalidad a la galería
- */
-function inicializarGaleria() {
-    // Se agregará lógica para lightbox o carousel de imágenes
-    console.log('Galería inicializada');
-}
-
-/**
- * FUNCIONALIDAD 6: Efectos de hover y eventos
- * Esta función agregará interactividad adicional
- */
-function inicializarEfectos() {
-    // Se agregarán efectos interactivos
-    console.log('Efectos inicializados');
-}
-
-// ==========================================
-// FUNCIONES AUXILIARES
-// ==========================================
-
-/**
- * Utilidad: Log personalizado para debugging
- */
-function log(mensaje, tipo = 'info') {
-    const timestamp = new Date().toLocaleTimeString();
-    console.log(`[${timestamp}] ${tipo.toUpperCase()}: ${mensaje}`);
-}
-
-/**
- * Utilidad: Validar email
- */
-function validarEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-}
-
-/**
- * Utilidad: Mostrar notificación
- */
-function mostrarNotificacion(mensaje, tipo = 'success') {
-    // Se puede implementar un sistema de notificaciones después
-    log(mensaje, tipo);
-}
-
-// ==========================================
-// EVENT LISTENERS - AGREGAR DESPUÉS
-// ==========================================
-
-// Eventos para botones
-// document.querySelectorAll('.btn').forEach(btn => {
-//     btn.addEventListener('click', manejarClickBoton);
-// });
-
-// Eventos para navegación
-// document.querySelectorAll('.nav-link').forEach(link => {
-//     link.addEventListener('click', manejarClickNavegacion);
-// });
-
-// Evento de redimensionamiento de ventana
-// window.addEventListener('resize', manejarRedimensionamiento);
-
-// Evento de scroll
-// window.addEventListener('scroll', manejarScroll);

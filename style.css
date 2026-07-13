@@ -111,8 +111,9 @@ section {
 .logo-subtitle {
     font-size: 10px;
     color: var(--color-text-light);
-    letter-spacing: 1px;
+    letter-spacing: 9px;
     margin-top: -4px;
+    padding-left: 10px;
 }
 
 /* Navegación */
@@ -771,7 +772,7 @@ section {
     line-height: 1.5;
 }
 
-/* Cursos */
+
 /* ==========================================
    SECCIÓN DE TESTIMONIOS
    ========================================== */
@@ -851,35 +852,66 @@ section {
     background-color: var(--color-white);
     padding: var(--spacing-lg);
     border-radius: var(--border-radius-md);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
     display: flex;
     flex-direction: column;
+    overflow:visible;
+    
 }
 
 .testimonio-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 16px rgba(193, 130, 124, 0.15);
+   transform: translateY(-8px);
+   /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05); */
 }
 
 .testimonio-image {
     width: 100%;
     aspect-ratio: 1;
     border-radius: var(--border-radius-md);
-    overflow: hidden;
+    overflow: visible;
     margin-bottom: var(--spacing-md);
+    background-size: cover;
+    position: relative;
+    
+}
+.testimonio-img-1 {
+    background-image: url("img/novia-portada.jpg");
 }
 
-.testimonio-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.testimonio-img-2 {
+    background-image: url("img/sociales-portada.jpg");
+}
+
+.testimonio-img-3 {
+    background-image: url("img/quinceañera-portada.jpeg");
+}
+
+.testimonio-img-4 {
+    background-image: url("img/editorial-portada.jpg");
+}
+
+
+
+.comillas-icon{
+    width:70px;
+    height:70px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-light);
+    bottom: -32px;
+    left: 50%;
+    position: absolute; 
+    transform: translateX(-50%);
+
 }
 
 .testimonio-stars {
     color: #d4af37;
-    font-size: 16px;
+    font-size: 24px;
     letter-spacing: 2px;
     margin-bottom: var(--spacing-md);
 }
@@ -946,15 +978,30 @@ section {
 
 .stat-card {
     display: flex;
-    flex-direction: column;
     align-items: center;
     text-align: center;
     gap: var(--spacing-md);
 }
+.stat-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 1px solid var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.stat-info{
+    text-align: left;
+}
 
 .stat-card svg {
-    width: 50px;
-    height: 50px;
+    margin-top: 4px;
+    width: 30px;
+    height: 30px;
+    color: var(--color-primary);
 }
 
 .stat-number {
@@ -1013,8 +1060,30 @@ section {
         padding: var(--spacing-lg) var(--spacing-md);
     }
 
+    .testimonios-header .section-subtitle {
+    color: var(--color-primary);
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.testimonios-header .heart-icon{
+    margin: 0;
+}
+
+    .testimonios-header .heart-icon::before,
+.testimonios-header .heart-icon::after {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background-color: var(--color-primary);
+    margin: 0 14px;
+}
+
     .testimonios-header h2 {
-        font-size: clamp(20px, 4vw, 28px);
+        font-size: clamp(32px, 4vw, 52px);
     }
 
     .testimonios-description {
@@ -1024,6 +1093,16 @@ section {
     .testimonio-card {
         padding: var(--spacing-md);
     }
+    .testimonio-image {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: var(--border-radius-md);
+    overflow: visible;
+    margin-bottom: 38px;
+    background-size: cover;
+    position: relative;
+    
+}
 
     .testimonio-text {
         font-size: 12px;
@@ -1034,6 +1113,18 @@ section {
         gap: var(--spacing-md);
         max-width: 100%;
     }
+
+    .stat-card {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-md);
+}
+
+
+
+
+
 }
 
 /* Páginas de categoría: rejilla de imágenes */
@@ -1527,7 +1618,7 @@ section {
 
 .title-seccion2{
     text-align: center;
-    font-size: clamp(32px, 10vw, 52px);
+    font-size: clamp(32px, 4vw, 52px);
     margin-top:10px ;
 }
 
