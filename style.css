@@ -657,7 +657,10 @@ section {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     background-size: cover;
     background-position: center;
+    text-decoration: none;
+
 }
+
 
 .gallery-card::before {
     content: "";
@@ -771,6 +774,29 @@ section {
     font-size: 14px;
     line-height: 1.5;
 }
+
+
+/*----------------------------------------- 
+Páginas de categoría: rejilla de imágenes 
+-------------------------------------------
+*/
+.category-gallery .images-grid {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.category-gallery .images-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+
 
 
 /* ==========================================
@@ -1020,144 +1046,7 @@ section {
     margin: 0;
 }
 
-/* ==========================================
-   CARRUSEL EN MÓVIL - TESTIMONIOS
-   ========================================== */
 
-@media (max-width: 768px) {
-    .testimonios-grid {
-        display: flex;
-        overflow-x: auto;
-        gap: var(--spacing-lg);
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        margin-bottom: var(--spacing-lg);
-    }
-
-    .testimonios-grid::-webkit-scrollbar {
-        display: none;
-    }
-
-    .testimonio-card {
-        flex: 0 0 100%;
-        min-width: 100%;
-        scroll-snap-align: start;
-    }
-
-    .testimonios-pagination {
-        margin-bottom: var(--spacing-lg);
-    }
-
-    .testimonios-stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-md);
-    }
-}
-
-@media (max-width: 480px) {
-    .testimonios-section {
-        padding: var(--spacing-lg) var(--spacing-md);
-    }
-
-    .testimonios-header .section-subtitle {
-    color: var(--color-primary);
-    font-size: 15px;
-    letter-spacing: 1px;
-    font-weight: 500;
-    margin-bottom: 0;
-}
-
-.testimonios-header .heart-icon{
-    margin: 0;
-}
-
-    .testimonios-header .heart-icon::before,
-.testimonios-header .heart-icon::after {
-    content: "";
-    display: inline-block;
-    width: 50px;
-    height: 1px;
-    background-color: var(--color-primary);
-    margin: 0 14px;
-}
-
-    .testimonios-header h2 {
-        font-size: clamp(32px, 4vw, 52px);
-    }
-
-    .testimonios-description {
-        font-size: 13px;
-    }
-
-    .testimonio-card {
-        padding: var(--spacing-md);
-    }
-    .testimonio-image {
-    width: 100%;
-    aspect-ratio: 1;
-    border-radius: var(--border-radius-md);
-    overflow: visible;
-    margin-bottom: 38px;
-    background-size: cover;
-    position: relative;
-    
-}
-
-    .testimonio-text {
-        font-size: 12px;
-    }
-
-    .testimonios-stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-md);
-        max-width: 100%;
-    }
-
-    .stat-card {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    gap: var(--spacing-md);
-}
-
-
-
-
-
-}
-
-/* Páginas de categoría: rejilla de imágenes */
-.category-gallery .images-grid {
-    max-width: 1200px;
-    margin: 2rem auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-}
-
-.category-gallery .images-grid img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: var(--border-radius-lg);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-.gallery-card {
-    text-decoration: none;
-}
-
-/* @media (max-width: 992px) {
-    .gallery-card-large { grid-column: span 12; grid-row: auto; }
-    .gallery-card-medium,
-    .gallery-card-small { grid-column: span 6; }
-}
-
-/* Layout móvil específico para la galería
-   Primera fila: Novias (col 1) | Sociales (col 2)
-   Segunda fila: Quinceañeras (col 1) | Editorial (col 2)
-   Tercera fila: Cursos (ancho completo) */
 @media (max-width: 768px) {
     .gallery .gallery-grid {
         grid-template-columns: repeat(2, 1fr) !important;
@@ -1188,14 +1077,7 @@ section {
     .gallery-badge { font-size: 12px; padding: 6px 10px; }
 }
 
-@media (max-width: 680px) {
-    .gallery-header h2 { font-size: 32px; }
-    .gallery-filters { gap: 10px; }
-    .gallery-card-medium,
-    .gallery-card-small { grid-column: span 12; }
-    .gallery-cta { flex-direction: column; align-items: stretch; }
-    .gallery-cta button { width: 100%; }
-} */
+
 
 /* Sobre mi */
 .about {
@@ -1334,9 +1216,50 @@ section {
     section {
         padding: var(--spacing-lg) var(--spacing-md);
     }
+
+    /* ==========================================
+       TESTIMONIOS (Tablets)
+       ========================================== */
+    .testimonios-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: var(--spacing-lg);
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        margin-bottom: var(--spacing-lg);
+    }
+    .testimonios-grid::-webkit-scrollbar {
+        display: none;
+    }
+    .testimonio-card {
+        flex: 0 0 100%;
+        min-width: 100%;
+        scroll-snap-align: start;
+    }
+    .testimonios-pagination {
+        margin-bottom: var(--spacing-lg);
+    }
+    .testimonios-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    /* ==========================================
+       UTILITY CLASSES (Tablets)
+       ========================================== */
+    .hidden-mobile {
+        display: none !important;
+    }
+    .visible-mobile {
+        display: block;
+    }
 }
 
-/* Móviles - hasta 480px ----------------------------*/
+
+/* ---------------------------------------
+Móviles - hasta 480px 
+------------------------------------------*/
 @media (max-width: 480px) {
     :root {
         --spacing-xl: 24px;
@@ -1663,6 +1586,12 @@ section {
     width: 40%;
 
 }
+.service-image-1 { 
+    background-position: center 0px;
+}
+.service-image-2 { 
+    background-position: center -30px;
+}
 .service-icon {
     width: 55px;
     height: 55px;
@@ -1733,7 +1662,9 @@ section {
 }
 
 
- /* SECTION 3-------------------------------- */
+ /* -----------------------------
+ SECTION 3
+ -------------------------------- */
 
    
     .gallery-text {
@@ -1762,9 +1693,69 @@ section {
     height: 220px;
   }
 
+  .gallery-cta{
+    display: flex;
+    flex-direction: column;
+  }
 
+    /* ==========================================
+       TESTIMONIOS 
+       ========================================== */
+    .testimonios-section {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+    .testimonios-header .section-subtitle {
+        color: var(--color-primary);
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    .testimonios-header .heart-icon{
+        margin: 0;
+    }
+    .testimonios-header .heart-icon::before,
+    .testimonios-header .heart-icon::after {
+        content: "";
+        display: inline-block;
+        width: 50px;
+        height: 1px;
+        background-color: var(--color-primary);
+        margin: 0 14px;
+    }
+    .testimonios-header h2 {
+        font-size: clamp(32px, 4vw, 52px);
+    }
+    .testimonios-description {
+        font-size: 13px;
+    }
+    .testimonio-card {
+        padding: var(--spacing-md);
+    }
+    .testimonio-image {
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: var(--border-radius-md);
+        overflow: visible;
+        margin-bottom: 38px;
+        background-size: cover;
+        position: relative;
+    }
+    .testimonio-text {
+        font-size: 12px;
+    }
+    .testimonios-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+        max-width: 100%;
+    }
+    .stat-card {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
 }
-
 /* Desktop grande - desde 1200px (opcional para mejoras) */
 @media (min-width: 1200px) {
     .header-container {
@@ -1803,40 +1794,24 @@ html {
    UTILITY CLASSES
    ========================================== */
 
-/* Ocultar elementos en móvil */
-@media (max-width: 768px) {
-    .hidden-mobile {
-        display: none !important;
-    }
-}
-
-/* Mostrar solo en móvil */
+/* Mostrar solo en móvil (por defecto oculto en escritorio) */
 .visible-mobile {
     display: none;
-}
-
-@media (max-width: 768px) {
-    .visible-mobile {
-        display: block;
-    }
 }
 
 /* Centrado de contenido */
 .text-center {
     text-align: center;
 }
-
 .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 /* Espaciado de márgenes */
 .mt-1 { margin-top: var(--spacing-sm); }
 .mt-2 { margin-top: var(--spacing-md); }
 .mt-3 { margin-top: var(--spacing-lg); }
-
 .mb-1 { margin-bottom: var(--spacing-sm); }
 .mb-2 { margin-bottom: var(--spacing-md); }
 .mb-3 { margin-bottom: var(--spacing-lg); }
