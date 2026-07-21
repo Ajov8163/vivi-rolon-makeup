@@ -1038,13 +1038,12 @@ Páginas de categoría: rejilla de imágenes
 }
 
 /* Sobre mi */
-.about {
+.sobre-mi {
     background-color: var(--color-bg-cream);
-    min-height: 400px;
+    min-height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-text-light);
 }
 
 /* Contacto */
@@ -1715,13 +1714,17 @@ Móviles - hasta 480px
     /*-------------------------
     SOBRE MI 
     --------------------------*/
-
+.sobre-mi{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
 .title-sobre-mi{
     font-family: "Playfair Display", serif, 'Garamond', 'Georgia', serif;
     font-size: clamp(32px, 4vw, 52px);
     color: var(--color-text-dark);
     font-weight: 500;
-    margin: var(--spacing-md) auto 0;
+    margin: 0;
     line-height: 1.1;
     text-align: center;
 }
@@ -1731,21 +1734,18 @@ Móviles - hasta 480px
     color: var(--color-primary)
 }
 
-/* .sobre-mi-text{
-    max-width: 220px;
-    margin: 0 auto;
+
+.sobre-mi-subtitle{
     text-align: center;
-} */
-.sobre-mi-text{
-    text-align: center;
-    margin-top: 15px;
+    margin-top: 10px;
     color: var(--color-text-dark);
     font-size: 15px;
      position: relative;
     display: inline-block;
     margin-bottom: 40px;
+    line-height: 1.6;
 }
-.sobre-mi-text::after{
+.sobre-mi-subtitle::after{
     content: "";
     position: absolute;
     left: 50%;
@@ -1756,6 +1756,43 @@ Móviles - hasta 480px
     transform: translateX(-50%);
 }
 
+.sobre-mi-parrafo{
+    width: 80%;
+    text-align: center;
+}
+
+.sobre-mi-image{
+    background-image: url(img/vivi1.webp);
+    margin-top: 30px;
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center 0px;
+    border-radius: 20px;
+    box-shadow:  0 20px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+.sobre-mi-descripcion{
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    background-color: #c1827ce0;
+    width: 70%;
+    padding: 14px;
+    border-radius: 10px;
+    line-height: 1.15;
+    color: white;
+}
+.sobre-mi-descripcion::after{
+    content: " ";
+    position: absolute;
+    background-image: url(img/comillas.webp);
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-color: blue;
+}
 
 
 
