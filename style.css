@@ -15,29 +15,29 @@
     --color-primary: #C1827C;      /* Rosa/Coral principal */
     --color-primary-light: #d9897e;  /* Rosa más clara */
     --color-primary-dark: #a15852;   /* Rosa más oscura */
-    
+
     /* Colores de fondo */
     --color-bg-light: #f5f0eb;     /* Beige muy claro */
     --color-bg-cream: #e8e0d7;     /* Crema */
-    
+
     /* Colores de texto */
     --color-text-dark: #2d2d2d;    /* Marrón oscuro */
     --color-text-light: #7a7a7a;   /* Gris medio */
-    
+
     /* Colores complementarios */
     --color-gold: #d4af37;         /* Oro */
     --color-white: #ffffff;        /* Blanco */
-    
+
     /* Tipografía */
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-elegant: 'Garamond', 'Georgia', serif;
-    
+
     /* Espaciado */
     --spacing-sm: 8px;
     --spacing-md: 15px;
     --spacing-lg: 32px;
     --spacing-xl: 48px;
-    
+
     /* Bordes */
     --border-radius: 8px;
     --border-radius-md: 16px;
@@ -171,7 +171,7 @@ section {
 }
 
 /* ==============================
-  clase para redondear especificamente el boton de reservar cita en el header modo desktop 
+  clase para redondear especificamente el boton de reservar cita en el header modo desktop
    ============================== */
 .btn.cita-header {
   border-radius: 24px;
@@ -189,13 +189,13 @@ section {
   width: 20px;
   height: 20px;
 }
- 
+
 
 /* Botón pequeño en header */
 .btn-small {
     padding: 8px 16px;
     font-size: 11px;
-   
+
 }
 
 /* Menú hamburguesa (oculto en desktop) */
@@ -275,7 +275,7 @@ transform .3s ease;
     background-image: url("/img/img-hero2.png");
     background-size: cover;
     padding: var(--spacing-xl);
-  
+
 }
 
 /* Contenido del hero */
@@ -304,7 +304,7 @@ transform .3s ease;
     line-height: 1.2;
     margin-top: var(--spacing-md);
 }
-   
+
 
 
 /* Descripción del hero (en cursiva) */
@@ -375,7 +375,7 @@ transform .3s ease;
     width: 190px;
     font-weight: 400;
     line-height: 1.4;
-    
+
 }
 
 .benefit-icon {
@@ -384,10 +384,10 @@ transform .3s ease;
    width: 60px;
    height: 60px;
    display: flex;
-   align-items: center ; 
+   align-items: center ;
     justify-content: center;
     color:#C1827C;
-    
+
 }
 
 /* Esto es para ajustar la posición del ícono SVG dentro del círculo, ya que a veces puede quedar un poco desalineado visualmente. El valor de translateY se puede ajustar según sea necesario para lograr el mejor aspecto. */
@@ -483,13 +483,13 @@ transform .3s ease;
     background-position: center;
 }
 
-.service-image-1 { 
+.service-image-1 {
     background-image: url('img/novia-servicios.jpg');
 }
-.service-image-2 {  
+.service-image-2 {
     background-image: url('img/social-servicio.jpg');
 }
-.service-image-3 { 
+.service-image-3 {
     background-image: url('img/quinceañera-servicios.JPG');
 }
 .service-image-4 {
@@ -669,7 +669,7 @@ transform .3s ease;
     grid-column: span 7;
     grid-row: span 2;
     min-height: 520px;
-    
+
 }
 
 .gallery-card-medium {
@@ -737,7 +737,7 @@ transform .3s ease;
     align-items: center;
     gap: var(--spacing-md);
     flex: 1;
-   
+
 }
 
 .gallery-cta-icon {
@@ -766,8 +766,8 @@ transform .3s ease;
 }
 
 
-/*----------------------------------------- 
-Páginas de categoría: rejilla de imágenes 
+/*-----------------------------------------
+Páginas de categoría: rejilla de imágenes
 -------------------------------------------
 */
 .category-gallery .images-grid {
@@ -874,7 +874,7 @@ Páginas de categoría: rejilla de imágenes
     display: flex;
     flex-direction: column;
     overflow:visible;
-    
+
 }
 
 .testimonio-card:hover {
@@ -890,7 +890,7 @@ Páginas de categoría: rejilla de imágenes
     margin-bottom: var(--spacing-md);
     background-size: cover;
     position: relative;
-    
+
 }
 .testimonio-img-1 {
     background-image: url("img/novia-portada.jpg");
@@ -921,7 +921,7 @@ Páginas de categoría: rejilla de imágenes
     background-color: var(--color-primary-light);
     bottom: -32px;
     left: 50%;
-    position: absolute; 
+    position: absolute;
     transform: translateX(-50%);
 
 }
@@ -1077,8 +1077,8 @@ Páginas de categoría: rejilla de imágenes
    ========================================== */
 
 
-/*--------------------------------------------- 
-Tablets - hasta 768px 
+/*---------------------------------------------
+Tablets - hasta 768px
 ------------------------------------------------*/
 @media (max-width: 768px) {
     /* Header */
@@ -1198,7 +1198,7 @@ Tablets - hasta 768px
     .gallery-badge { font-size: 12px; padding: 6px 10px; }
 
     /* ==========================================
-       TESTIMONIOS 
+       TESTIMONIOS
        ========================================== */
     .testimonios-grid {
         display: flex;
@@ -1225,12 +1225,12 @@ Tablets - hasta 768px
         gap: var(--spacing-md);
     }
 
- 
+
 }
 
 
 /* ---------------------------------------
-Móviles - hasta 480px 
+Móviles - hasta 480px
 ------------------------------------------*/
 @media (max-width: 480px) {
     :root {
@@ -1242,7 +1242,7 @@ Móviles - hasta 480px
     /* Header */
     .logo h1 {
         font-size: 18px;
-       
+
     }
 
     .logo-subtitle {
@@ -1277,7 +1277,7 @@ Móviles - hasta 480px
         flex-direction: column;
         align-items: center;
         gap: var(--spacing-md);
-  
+
         transform: translateX(0);
     }
 
@@ -1318,7 +1318,7 @@ Móviles - hasta 480px
         border-radius: 0;
         margin-bottom: var(--spacing-md);
     }
-     
+
     .hero-content {
         display: flex;
         flex-direction: column;
@@ -1383,15 +1383,15 @@ Móviles - hasta 480px
     .btn {
         width: 80%;
         padding: 12px 16px;
-        font-size: 11px;    
+        font-size: 11px;
     }
 
     button.btn-primary.cita-hero {
         display: flex;
         justify-content: center;
-      
-        
-        
+
+
+
     }
     button.btn.btn-secondary{
         padding: 16px 16px;
@@ -1459,8 +1459,8 @@ Móviles - hasta 480px
         display: none;
     }
 
-  
- /*------------------------------- 
+
+ /*-------------------------------
  SECTION 2
  -------------------------------- */
 
@@ -1470,7 +1470,7 @@ Móviles - hasta 480px
         padding: var(--spacing-lg) var(--spacing-md);
     }
 
-   
+
 
 .heart-icon{
     margin: 0;
@@ -1540,10 +1540,10 @@ Móviles - hasta 480px
     width: 40%;
 
 }
-.service-image-1 { 
+.service-image-1 {
     background-position: center 0px;
 }
-.service-image-2 { 
+.service-image-2 {
     background-position: center -30px;
 }
 .service-icon {
@@ -1559,7 +1559,7 @@ Móviles - hasta 480px
     position: absolute;
     bottom: 10px;
     right: -14px;
-    
+
 }
 
 .service-info {
@@ -1608,7 +1608,7 @@ Móviles - hasta 480px
     width: 16px;
     height: 16px;
     color: var(--color-primary);
-    
+
 }
 .services-section2{
     padding: 0;
@@ -1620,7 +1620,7 @@ Móviles - hasta 480px
  SECTION 3
  -------------------------------- */
 
-   
+
     .gallery-text {
         font-size: 15px;
         text-align: center;
@@ -1653,7 +1653,7 @@ Móviles - hasta 480px
   }
 
     /* ==========================================
-       TESTIMONIOS 
+       TESTIMONIOS
        ========================================== */
     .testimonios-section {
         padding: var(--spacing-lg) var(--spacing-md);
@@ -1712,7 +1712,7 @@ Móviles - hasta 480px
 
 
     /*-------------------------
-    SOBRE MI 
+    SOBRE MI
     --------------------------*/
 .sobre-mi{
     text-align: center;
@@ -1777,21 +1777,44 @@ Móviles - hasta 480px
     bottom: -20px;
     right: 20px;
     background-color: #c1827ce0;
-    width: 70%;
-    padding: 14px;
+    width: 60%;
+    padding: 20px;
     border-radius: 10px;
     line-height: 1.15;
     color: white;
+    font-size: 13px;
+    text-align: left;
 }
 .sobre-mi-descripcion::after{
-    content: " ";
+    content: "";
     position: absolute;
     background-image: url(img/comillas.webp);
-    width: 20px;
-    height: 20px;
-    top: 0;
-    left: 0;
-    background-color: blue;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    top: -13px;
+    left: 15px;
+}
+.sobre-mi-firma{
+    font-family: "Parisienne", cursive;
+    font-size: 20px;
+    text-align: end;
+    margin-top: 10px;
+    position: relative;
+}
+.sobre-mi-firma::after{
+   content: "";
+   position: absolute;
+   background-image: url(img/heart-icon.webp);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   width: 10px;
+   height: 10px;
+   top: -5px;
+   transform: rotate(12deg);
 }
 
 
@@ -1804,10 +1827,12 @@ Móviles - hasta 480px
 
 
 
+
+
 }
 
 
-/*--------------------------------------------------- 
+/*---------------------------------------------------
 Desktop grande - desde 1200px (opcional para mejoras)
 ----------------------------------------------------- */
 @media (min-width: 1200px) {
@@ -1818,7 +1843,7 @@ Desktop grande - desde 1200px (opcional para mejoras)
 
     .hero {
      height: 88vh;
-     background-position: center -260px; 
+     background-position: center -260px;
      background-size: 110%;
     }
 

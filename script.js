@@ -5,7 +5,7 @@
 // Esperar a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
     inicializarMenuHamburguesa();
-    inicializarCarruselTestimonios();
+    // inicializarCarruselTestimonios();
     actualizarHeaderHeight();
 });
 
