@@ -235,6 +235,7 @@ transform .3s ease;
     text-align: center;
 }
 
+
 /* Botón primario (relleno rosa) */
 .btn-primary {
     background-color: var(--color-primary);
@@ -260,6 +261,9 @@ transform .3s ease;
     background-color: var(--color-primary);
     color: var(--color-white);
     transform: translateY(-2px);
+}
+.btn:active{
+    transform:scale(.9);
 }
 
 /* ==========================================
@@ -1771,6 +1775,7 @@ Móviles - hasta 480px
     border-radius: 20px;
     box-shadow:  0 20px 40px rgba(0, 0, 0, 0.2);
     position: relative;
+    margin-bottom: 30px;
 }
 .sobre-mi-descripcion{
     position: absolute;
@@ -1818,8 +1823,37 @@ Móviles - hasta 480px
 }
 
 
+/*---------------------------------------- 
+BANER
+------------------------------------------ */
+.baner{
+   background-image: url(img/baner-movil.webp);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center -350px;
+   height: 50svh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   filter:contrast(1.1) ;
+}
 
+.baner h2{
+    margin: var(--spacing-xl) auto 20px;
 
+}
+
+.baner .heart-icon{
+    margin-bottom: 20px;
+}
+.baner p{
+    width: 60%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.baner button{
+    width: 60%;
+}
 
 
 
